@@ -5,12 +5,19 @@ let audioTurn = new Audio("ting.mp3")
 let gameOver = new Audio("gameover.mp3")
 let turn = "X"
 let isgameover = false;
+// document.getElementById("playmusic").addEventListener("click", function(){
+//     console.log("music played")
+//     music.play()
+// })
 
 //Function to change the turn
 const changeTurn = ()=>{
     return turn === "X"? "0": "X"
 }
-
+// function playbgmusic(){
+//     document.getElementById("playmusic").click()
+// }
+// playbgmusic()
 //Function to check a win
 const checkWin =()=>{
     let boxtext = document.getElementsByClassName('boxtext');
@@ -35,7 +42,7 @@ const checkWin =()=>{
     })
 }
 //Game logic
- 
+
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
